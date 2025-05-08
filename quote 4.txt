@@ -1,0 +1,11 @@
+const quotes = [
+    { text: "Believe in yourself!", author: "Anonymous" },
+    { text: "Keep pushing forward.", author: "Unknown" },
+    { text: "Stay positive and strong.", author: "Someone" },
+    // Add more quotes as needed
+  ];
+  
+  module.exports = (req, res) => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    res.json(quotes[randomIndex]);
+  };
